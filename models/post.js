@@ -1,5 +1,10 @@
 module.exports = function(sequelize, DataTypes) {
     var Post = sequelize.define("Post", {
+      name : {
+        type: DataTypes.STRING,
+        allowNull: false,
+        defaultValue: "No Name"
+      },
       species: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -15,6 +20,9 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.TEXT,
         allowNull: false,
         len: [1]
+      },
+      photo: { 
+        type: Sequelize.BLOB
       }
     });
   
