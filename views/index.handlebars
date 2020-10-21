@@ -1,46 +1,48 @@
-<h1 id="burger-head">Burger Devourer!</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<div id="not-devoured">
-    <h2>Burgers that are not devoured!</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Parrot Passion </title>
+    <link rel="stylesheet" href="foundation.css">
+</head>
 
-    <ul>
-        {{#each burgers}}
-        {{#unless devoured}}
-        {{> burgers/burgers-block devoured=true}}
-        {{/unless}}
-        {{/each}}
-    </ul>
-</div>
-
-<div id="devoured">
-    <h2>Burgers that are devoured!</h2>
-
-    <ul>
-        {{#each burgers}}
-        {{#if devoured}}
-        {{> burgers/burgers-block devoured=false}}
-        {{/if}}
-        {{/each}}
-    </ul>
-</div>
-
-<div id="add-burger">
-    <h2>Add a Burger</h2>
-    <form class="create-form">
-
-        <div class="form-group">
-            <label for="burg">Burger Name:</label>
-            <input type="text" id="burg" name="name">
+<body>
+    <div class="header">
+        <a href="#default" class="logo">Parrot Passion</a>
+        <div class="header-right">
+            <a href="#about">About</a>
+            <a href="#shop">Shop with us!</a>
         </div>
-
-        <div class="form-group">
-            <label for="devoured">Devoured?</label><br>
-            <input type="radio" name="devoured" value="1" checked> Devoured!<br>
-            <input type="radio" name="devoured" value="0"> Waiting
+    </div>
+    <div class="row">
+        <div class="large-12 columns">
+            <div class="callout">
+                <h3> Welcome to Parrot Passion, where you can find your bestfriend today!</h3>
+            </div>
         </div>
-
-        <button type="submit" id="new-burger">Add Burger</button>
+    </div>
+    <form>
+        <fieldset>
+            <legend>Main Page</legend>
+            <h4>Search</h4>
+            <input type="text" placeholder="Search your parrot here..">
+            <h5>Your Parrot Info.. </h5>
+            <img src="c115e400743744250195e8c5e8cfc9abc9-9-parrots.rsquare.w1200.jpg">
+        </fieldset>
     </form>
-</div>
+    <div class="row">
+        <div class="col-3 menu">
+            <ul>
+                <li>Parrot 1</li>
+                <li>Parrot 2</li>
+                <li>Parrot 3</li>
+                <li>Parrot 4</li>
+            </ul>
+        </div>
+</body>
+</body>
 
-<img id="burger-pic" src="img/Floating-burger-PNG.png" alt="Burger" width="500px">
+</html>
