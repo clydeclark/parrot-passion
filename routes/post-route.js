@@ -1,4 +1,7 @@
 var db = require("../models");
+const homeController = require("upload-route.js");
+const uploadController = require("upload-file.js");
+const upload = require("../middleware/upload");
 
 module.exports = function(app) {
 
@@ -16,6 +19,9 @@ module.exports = function(app) {
       res.json(dbPost);
     });
   });
+
+  // access upload page
+  app.get("/api/upload", homeController.getHome);
 
   app.get("/api/posts/:id", function(req, res) {
 
@@ -36,6 +42,9 @@ module.exports = function(app) {
       res.json(dbPost);
     });
   });
+
+  // post new parrot
+  app.post("/api/upload/file", upload.single("file"), uploadController.uploadFiles);
 
 
   app.delete("/api/posts/:id", function(req, res) {
@@ -61,4 +70,5 @@ module.exports = function(app) {
     });
   });
 };
+
 

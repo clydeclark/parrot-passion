@@ -26,15 +26,15 @@ module.exports = function(sequelize, DataTypes) {
       }
     });
   
-    Post.associate = function(models) {
-      // We're saying that a Post should belong to an Seller
-      // A Post can't be created without a Seller due to the foreign key constraint
-      Post.belongsTo(models.Seller, {
-        foreignKey: {
-          allowNull: false
-        }
-      });
-    };
+    // Post.associate = function(models) {
+    //   // We're saying that a Post should belong to an Seller
+    //   // A Post can't be created without an Seller due to the foreign key constraint
+    //   Post.belongsTo(models.Seller, {
+    //     foreignKey: {
+    //       allowNull: false
+    //     }
+    //   });
+    // };
   
     return Post;
   };
