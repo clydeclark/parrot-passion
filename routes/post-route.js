@@ -1,6 +1,6 @@
 var db = require("../models");
-const homeController = require("upload-route.js");
-const uploadController = require("upload-file.js");
+const homeController = require("./upload-route");
+const uploadController = require("./upload-file");
 const upload = require("../middleware/upload");
 
 module.exports = function(app) {
