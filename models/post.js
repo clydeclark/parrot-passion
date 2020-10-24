@@ -21,7 +21,7 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false,
         len: [1]
       },
-      photo: { 
+      image: { 
         type: DataTypes.BLOB("long")
       }
     });

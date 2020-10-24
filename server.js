@@ -25,7 +25,7 @@ app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
 require("./routes/post-route.js")(app);
-require("./routes/seller-route.js")(app);
+// require("./routes/seller-route.js")(app);
 
 // app.use(routes);
 // app.use(routes2);

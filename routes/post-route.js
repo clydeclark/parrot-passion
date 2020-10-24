@@ -14,7 +14,7 @@ module.exports = function(app) {
   
     db.Post.findAll({
       where: query,
-      include: [db.Seller]
+      // include: [db.Seller]
     }).then(function(dbPost) {
       res.json(dbPost);
     });
@@ -28,7 +28,7 @@ module.exports = function(app) {
     db.Post.findOne({
       where: {
         id: req.params.id,
-        include: [db.Seller]
+        // include: [db.Seller]
       }
     }).then(function(dbPost) {
       console.log(dbPost);
