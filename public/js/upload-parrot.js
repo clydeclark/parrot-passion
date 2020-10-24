@@ -16,4 +16,33 @@ $(document).ready(function() {
         $("#input-files").on("change", function() {
           imagesPreview(this, "div.preview-images");
         });
+        
+    function Submit(event) {
+    // Make sure to preventDefault on a submit event.
+    event.preventDefault();
+
+    var newParrot = {
+      name: $("#ca").val().trim(),
+    };
+
+    // Send the POST request.
+    $.ajax("/api/posts", {
+      type: "POST",
+      data: newParrot
+    }).then(
+      function() {
+        console.log("created new parrot");
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  };
+
+
+
+
+
+
       });
+
+
