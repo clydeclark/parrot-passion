@@ -26,7 +26,7 @@ $(document).ready(function() {
     };
 
     // Send the POST request.
-    $.ajax("/api/posts", {
+    $.ajax("/api/upload/file", {
       type: "POST",
       data: newParrot
     }).then(

@@ -22,7 +22,7 @@
           <h4>Sell a Parrot!</h4>
 
           <form
-            class="mt-4"
+            class="create-parrot"
             action="/upload"
             method="POST"
             enctype="multipart/form-data"
@@ -34,23 +34,19 @@
                 id="input-files"
                 class="form-control-file border"
               />
-            </div>
-
-            <div>
-              <form class="create-parrot">
                 <input type="text" placeholder="Name" id="name">
 
 
 
-                <input type="text" placeholder="Age">
+                <input type="text" placeholder="Age" id="age">
 
 
 
-                <input type="text" placeholder="Species">
+                <input type="text" placeholder="Species" id="species">
 
 
 
-                <input type="text" placeholder="Description">
+                <input type="text" placeholder="Description" id="desc">
               </form>
             </div>
             <button type="submit" class="btn btn-primary" onclick="Submit()">Submit</button>
