@@ -18,7 +18,7 @@ $(document).ready(function() {
         });
         $( "#create-parrot" ).click(function() {
           console.log("test 2");
-          createParrot();
+          createParrot(event);
         });  
 
 
@@ -33,6 +33,7 @@ $(document).ready(function() {
             species: $(".species").val().trim(),
             desc: $(".desc").val().trim()
           };
+          console.log(newParrot);
         
           // Send the POST request.
           $.ajax("/api/upload/file", {
