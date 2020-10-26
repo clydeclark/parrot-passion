@@ -16,33 +16,36 @@ $(document).ready(function() {
         $("#input-files").on("change", function() {
           imagesPreview(this, "div.preview-images");
         });
+        $( "#create-parrot" ).click(function() {
+          console.log("test 2");
+          createParrot();
+        });  
+
+
+        function createParrot(event) {
+          // Make sure to preventDefault on a submit event.
+          event.preventDefault();
+          console.log("test 1");
         
-    function Submit(event) {
-    // Make sure to preventDefault on a submit event.
-    event.preventDefault();
-
-    var newParrot = {
-      name: $("#ca").val().trim(),
-    };
-
-    // Send the POST request.
-    $.ajax("/api/upload/file", {
-      type: "POST",
-      data: newParrot
-    }).then(
-      function() {
-        console.log("created new parrot");
-        // Reload the page to get the updated list
-        location.reload();
-      }
-    );
-  };
-
-
-
-
-
-
-      });
-
+          var newParrot = {
+            name: $(".name").val().trim(),
+            age: $(".age").val().trim(),
+            species: $(".species").val().trim(),
+            desc: $(".desc").val().trim()
+          };
+        
+          // Send the POST request.
+          $.ajax("/api/upload/file", {
+            type: "POST",
+            data: newParrot
+          }).then(
+            function() {
+              console.log("created new parrot");
+              // Reload the page to get the updated list
+              location.reload();
+            }
+          );
+          }
+        
+});
 

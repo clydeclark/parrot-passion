@@ -9,6 +9,9 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./js/upload-parrot.js"></script>
     <style>
       div.preview-images > img {
         width: 30%;
@@ -22,46 +25,34 @@
           <h4>Sell a Parrot!</h4>
 
           <form
-            class="create-parrot"
+            class="form-group"
             action="/upload"
             method="POST"
             enctype="multipart/form-data"
           >
-            <div class="form-group">
+            <div id="create-parrot">
               <input
                 type="file"
                 name="file"
                 id="input-files"
                 class="form-control-file border"
               />
-                <input type="text" placeholder="Name" id="name">
-
-
-
-                <input type="text" placeholder="Age" id="age">
-
-
-
-                <input type="text" placeholder="Species" id="species">
-
-
-
-                <input type="text" placeholder="Description" id="desc">
-              </form>
+              <input type="text" placeholder="Name" id="name">
+              <input type="text" placeholder="Age" id="age">
+              <input type="text" placeholder="Species" id="species">
+              <input type="text" placeholder="Description" id="desc">
             </div>
-            <button type="submit" class="btn btn-primary" onclick="Submit()">Submit</button>
           </form>
+          <button type="submit" id="create-parrot" class="btn btn-primary">Submit</button>
+          
         </div>
       </div>
-      <hr />
       <div class="row">
         <div class="col-sm-12">
           <div class="preview-images"></div>
         </div>
       </div>
     </div>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="./js/upload-parrot.js"></script>
+    
   </body>
 </html>
