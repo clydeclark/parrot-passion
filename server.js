@@ -1,12 +1,11 @@
 require('dotenv').config();
+const path = require("path");
 var express = require("express");
 
 
 var app = express();
 
 var PORT = process.env.PORT || 8080;
-
-
 
 // Serve static content for the app from the "public" directory in the application directory.
 var db = require("./models");
@@ -15,7 +14,8 @@ var db = require("./models");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static("public"));
+// app.use(express.static("public"));
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
 // Set Handlebars.
 var exphbs = require("express-handlebars");
