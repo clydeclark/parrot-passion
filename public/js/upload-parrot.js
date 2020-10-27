@@ -28,10 +28,10 @@ $(document).ready(function() {
           console.log("test 1");
         
           var newParrot = {
-            name: $(".name").val().trim(),
-            age: $(".age").val().trim(),
-            species: $(".species").val().trim(),
-            desc: $(".desc").val().trim()
+            name: $("#name").val().trim(),
+            age: $("#age").val().trim(),
+            species: $("#species").val().trim(),
+            desc: $("#desc").val().trim()
           };
           console.log(newParrot);
         
