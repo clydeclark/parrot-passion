@@ -1,4 +1,7 @@
 var db = require("../models");
+const homeController = require("./upload-route");
+const uploadController = require("./upload-file");
+const upload = require("../middleware/upload");
 
 module.exports = function(app) {
 
@@ -11,18 +14,21 @@ module.exports = function(app) {
   
     db.Post.findAll({
       where: query,
-      include: [db.Seller]
+      // include: [db.Seller]
     }).then(function(dbPost) {
       res.json(dbPost);
     });
   });
+
+  // access upload page
+  app.get("/api/upload", homeController.getHome);
 
   app.get("/api/posts/:id", function(req, res) {
 
     db.Post.findOne({
       where: {
         id: req.params.id,
-        include: [db.Seller]
+        // include: [db.Seller]
       }
     }).then(function(dbPost) {
       console.log(dbPost);
@@ -36,6 +42,9 @@ module.exports = function(app) {
       res.json(dbPost);
     });
   });
+
+  // post new parrot
+  app.post("/api/upload/file", upload.single("file"), uploadController.uploadFiles);
 
 
   app.delete("/api/posts/:id", function(req, res) {
@@ -61,3 +70,5 @@ module.exports = function(app) {
     });
   });
 };
+
+

@@ -16,13 +16,13 @@ module.exports = function(sequelize, DataTypes) {
       }
     });
   
-    Seller.associate = function(models) {
-      // Associating Seller with Posts
-      // When an Seller is deleted, also delete any associated Posts
-      Seller.hasMany(models.Post, {
-        onDelete: "cascade"
-      });
-    };
+    // Seller.associate = function(models) {
+    //   // Associating Seller with Posts
+    //   // When an Seller is deleted, also delete any associated Posts
+    //   Seller.hasMany(models.Post, {
+    //     onDelete: "cascade"
+    //   });
+    // };
   
     return Seller;
   };
