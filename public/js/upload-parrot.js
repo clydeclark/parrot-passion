@@ -28,10 +28,10 @@ $(document).ready(function() {
           console.log("test 1");
         
           var newParrot = {
-            name: $(".name").val().trim(),
-            age: $(".age").val().trim(),
-            species: $(".species").val().trim(),
-            desc: $(".desc").val().trim()
+            name: $("#name").val().trim(),
+            age: $("#age").val().trim(),
+            species: $("#species").val().trim(),
+            desc: $("#desc").val().trim()
           };
           console.log(newParrot);
         
@@ -43,7 +43,7 @@ $(document).ready(function() {
             function() {
               console.log("created new parrot");
               // Reload the page to get the updated list
-              location.reload();
+              // location.reload();
             }
           );
           }
