@@ -4,7 +4,7 @@
 
 ## Description
 
-Fake Ecommerce Website
+Fake ecommerce website created with three other classmates to gain experience and knowlege in websites that revolve around buying and selling products
 
 ## Table of Contents
 
