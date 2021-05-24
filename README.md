@@ -6,6 +6,11 @@
 ## Description
 Fake ecommerce website created with three other classmates to gain experience and knowlege in websites that revolve around buying and selling products
 
+![Home Page](img/img1.JPG "Home Page")
+![Cart Page](img/img2.JPG "Cart Page")
+![Shop Page](img/img3.JPG "Shop Page")
+
+
 
 ## Table of Contents
 
