@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Parrot Passion
 
 ![Badge for Github repo license](https://img.shields.io/badge/ParrotPassion%20-IsacPederson-green)
@@ -25,3 +26,6 @@ npm install, mysql login, npm start
 ## Questions
 
 If you have any questions about the repo, open an issue or contact me directly at isacjped@gmail.com. You can find more of my work at (https://github.com/Isac-Pederson/)
+=======
+# parrot-passion
+>>>>>>> 5393be7a8f0619ce2aa3b47629e5d017390f9f82
